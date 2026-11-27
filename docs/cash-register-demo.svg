@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480" role="img" aria-labelledby="title description">
+  <title id="title">Cash register example run</title>
+  <desc id="description">Terminal-style capture of adding coffee and a muffin, applying a 20 percent discount, and printing the register state.</desc>
+  <rect width="900" height="480" rx="14" fill="#171923"/>
+  <path d="M0 14a14 14 0 0 1 14-14h872a14 14 0 0 1 14 14v42H0z" fill="#272a36"/>
+  <circle cx="28" cy="28" r="7" fill="#ff6058"/>
+  <circle cx="52" cy="28" r="7" fill="#ffbd2e"/>
+  <circle cx="76" cy="28" r="7" fill="#28c840"/>
+  <text x="450" y="34" text-anchor="middle" fill="#c6c8d1" font-family="sans-serif" font-size="15">Cash register demo</text>
+  <g font-family="monospace" font-size="16">
+    <text x="32" y="88" fill="#8bd5ca">$ python3 demo.py</text>
+    <text x="32" y="116" fill="#c6c8d1">from cash_register import CashRegister</text>
+    <text x="32" y="144" fill="#c6c8d1">register = CashRegister(discount=20)</text>
+    <text x="32" y="172" fill="#c6c8d1">register.add_item("coffee", 5, quantity=2)</text>
+    <text x="32" y="200" fill="#c6c8d1">register.add_item("muffin", 5)</text>
+    <text x="32" y="228" fill="#c6c8d1">register.apply_discount()</text>
+    <text x="32" y="256" fill="#c6c8d1">print(f"Total: ${register.total:g}")</text>
+    <text x="32" y="284" fill="#c6c8d1">print(f"Items: {register.items}")</text>
+    <text x="32" y="312" fill="#c6c8d1">print(f"Transactions: {len(register.previous_transactions)}")</text>
+    <text x="32" y="356" fill="#a6da95">After the discount, the total comes to $12.</text>
+    <text x="32" y="384" fill="#a6da95">Total: $12</text>
+    <text x="32" y="412" fill="#a6da95">Items: ['coffee', 'coffee', 'muffin']</text>
+    <text x="32" y="440" fill="#a6da95">Transactions: 2</text>
+  </g>
+</svg>
